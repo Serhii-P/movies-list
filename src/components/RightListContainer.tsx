@@ -16,7 +16,7 @@ const RightListContainer: React.FC<Props> = ({rightList, search, onRemoveClick})
 
   return (
     <>
-      <SortMovies list={rightList} searchItem={search} onClick={onRemoveClick}/>
+      <SortMovies list={rightList} searchItem={search} onClick={onRemoveClick} btn="Remove"/>
     </>
   )
 }

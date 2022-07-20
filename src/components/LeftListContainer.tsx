@@ -12,7 +12,7 @@ const LeftListContainer: React.FC<Props> = ({leftList, search, onAddClick}) => {
 
   return (
     <>
-      <SortMovies list={leftList} searchItem={search} onClick={onAddClick}/>
+      <SortMovies list={leftList} searchItem={search} onClick={onAddClick} btn="Add"/>
     </>
   )
 }

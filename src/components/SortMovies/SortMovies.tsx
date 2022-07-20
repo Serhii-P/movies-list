@@ -3,15 +3,16 @@ import { differenceInDays, fromUnixTime } from "date-fns";
 import { Movie } from '../../movies';
 import Button from '../Button/Button';
 import NotFound from '../NotFound';
+import Card from '../Card/Card';
 
 type Props = {
   list: Movie[];
   searchItem: string;
   onClick: (product: Movie) => void;
+  btn: string
 }
 
-const SortMovies: React.FC<Props> = ({list, searchItem, onClick}) => {
-console.log(list);
+const SortMovies: React.FC<Props> = ({list, searchItem, onClick, btn}) => {
   const sortMoviesContent =  list.length > 0 ? (
     <div >
        {list.filter(query => {
@@ -40,14 +41,9 @@ console.log(list);
                 (e.currentTarget.style.backgroundColor = "#64c86420")
               }
             >
-              <div id="movie-title">{product.title}</div>
-              <div>
-                Release date:{" "}
-                {differenceInDays(new Date(), fromUnixTime(product.release_date))}{" "}
-                days ago
-              </div>
+              <Card title={product.title} date={product.release_date}/>
               
-              <Button name="Add"  onClick={() => onClick(product)}/>
+              <Button name={btn}  onClick={() => onClick(product)}/>
             </div>
       ))}
     </div>
