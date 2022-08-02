@@ -1,0 +1,9 @@
+.poster img {
+  max-width: 200px;
+}
+
+@media (max-width: 410px) {
+  .poster img {
+    max-width: 100px;
+  }
+}

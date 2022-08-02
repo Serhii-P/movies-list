@@ -38,16 +38,52 @@
   }
 }
 
-#add-button { position: absolute; top: 0; right: 0; }
+#left-movie-container { position: absolute; border: 2px solid black; max-width: 400px; left: 0; }
 
-#remove-button { position: absolute; top: 0; right: 0; }
+#right-movie-container { 
+  position: absolute; 
+  border: 2px solid black; 
+  max-width: 400px; 
+  right: 0; 
+  width: 100%;
+}
 
-#left-movie-container { position: absolute; border: 2px solid black; width: 400px; left: 0; }
+#movie { 
+  position: relative; 
+  background-color: #64c86420; 
+}
 
-#right-movie-container { position: absolute; border: 2px solid black; width: 400px; right: 0; }
-
-#movie { position: relative; background-color: #64c86420; }
+ #movie { 
+   position: relative; 
+   background-color: #64c86420; 
+   transition: all 0.3s;
+ 
+   &:hover {
+     background-color: rgba(100, 200, 100, 0.44);
+   }
+  }
 
 #movie-title { font-weight: 500; font-size: large; }
 
-#right-movie-container #movie { background-color: #c8646420; }
+#right-movie-container #movie { 
+  background-color: #c8646420; 
+
+  &:hover {
+    background-color: rgba(100, 200, 100, 0.44);
+  }
+
+}
+
+@media (max-width: 815px) {
+  #right-movie-container,
+  #left-movie-container {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 410px) {
+  #right-movie-container,
+  #left-movie-container {
+    max-width: 148px;
+  }
+}

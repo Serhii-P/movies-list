@@ -1,9 +1,5 @@
 import React from 'react'
-import { differenceInDays, fromUnixTime } from "date-fns";
-
 import { Movie } from '../movies';
-import NotFound from './NotFound';
-import Button from './Button/Button';
 import SortMovies from './SortMovies/SortMovies';
 
 type Props = {
